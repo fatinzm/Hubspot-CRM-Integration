@@ -102,7 +102,7 @@ def main():
     company_id = company["id"]
     print(f"✅ Created company: {company_id}")
 
-    # --- Step 4: Create an Association (employee/member if possible) ---
+    # --- Step 4: Create an Association (employee/member) ---
     # First: discover labels available between contact<->company
     labels = rate_limited_request(
         "GET",
@@ -138,3 +138,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
